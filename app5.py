@@ -174,7 +174,7 @@ with tabs[0]:
             alice_name = None
 
         if alice_img is not None:
-            st.image(alice_img, caption=f"Alice's image: {alice_name}", use_column_width=True)
+            st.image(alice_img, caption=f"Alice's image: {alice_name}", use_container_width=True)
             st.write(f"Image size: {alice_img.size[0]} x {alice_img.size[1]} — bytes: {len(alice_bytes)}")
 
     # Controls and run on right (but results below left to stay left-aligned)
@@ -270,11 +270,11 @@ with tabs[0]:
                 except Exception as e:
                     st.warning(f"Could not open custom Eve image at {EVE_IMAGE_PATH}: {e}")
             if eve_custom_img is not None:
-                st.image(eve_custom_img, caption="Eve's provided corrupted view (use EVE_IMAGE_PATH)", use_column_width=True)
+                st.image(eve_custom_img, caption="Eve's provided corrupted view (use EVE_IMAGE_PATH)", use_container_width=True)
             else:
                 if alice_img is not None:
                     eve_img = make_eve_view(alice_img, pixel_scale=12, noise_level=0.08)
-                    st.image(eve_img, caption="Eve's pixelated corrupted view (generated)", use_column_width=True)
+                    st.image(eve_img, caption="Eve's pixelated corrupted view (generated)", use_container_width=True)
                 else:
                     st.write("Eve receives corrupted data (non-image).")
 
@@ -316,7 +316,7 @@ with tabs[0]:
             st.subheader("7) Transfer artifacts")
             st.write("**Alice (original)**")
             if alice_img is not None:
-                st.image(alice_img, use_column_width=True)
+                st.image(alice_img, use_container_width=True)
             st.download_button("Download Original (Alice)", data=alice_bytes, file_name=f"alice_{alice_name}")
 
             st.write("**Eve (corrupted)**")
@@ -432,4 +432,5 @@ with tabs[1]:
 # ---------------------------
 st.markdown("---")
 st.caption("Educational demo. Keys shown / downloadable for demonstration — in real QKD, keys and raw material are handled confidentially.")
+
 
