@@ -1,0 +1,9 @@
+streamlit
+numpy
+matplotlib
+plotly
+seaborn
+cryptography
+pycryptodome
+pillow
+pandas
