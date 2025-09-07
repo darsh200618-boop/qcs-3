@@ -13,7 +13,7 @@ from typing import Dict, Any
 # ---------------------------
 PAGE_TITLE = "Quantum Crypto Simulator — BB84 (Pro)"
 QBER_ABORT_THRESHOLD = 0.11  # 11%
-EVE_IMAGE_PATH = None
+EVE_IMAGE_PATH = "windows-2.png"
 # If you want to show your own Eve corrupted image, set EVE_IMAGE_PATH to string path,
 # e.g. EVE_IMAGE_PATH = "C:/Users/HP/Downloads/image/eve_corrupted.png"
 # (Or place an image inside repo/images/ and set path accordingly.)
@@ -432,3 +432,4 @@ with tabs[1]:
 # ---------------------------
 st.markdown("---")
 st.caption("Educational demo. Keys shown / downloadable for demonstration — in real QKD, keys and raw material are handled confidentially.")
+
