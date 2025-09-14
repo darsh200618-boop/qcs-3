@@ -11,12 +11,9 @@ from typing import Dict, Any
 # ---------------------------
 # Configuration / constants
 # ---------------------------
-PAGE_TITLE = "Quantum Crypto Simulator — BB84 (Pro)"
+PAGE_TITLE = "Quantum Crypto Simulator — BB84(pro)"
 QBER_ABORT_THRESHOLD = 0.11  # 11%
-EVE_IMAGE_PATH = "windows-2.png"
-# If you want to show your own Eve corrupted image, set EVE_IMAGE_PATH to string path,
-# e.g. EVE_IMAGE_PATH = "C:/Users/HP/Downloads/image/eve_corrupted.png"
-# (Or place an image inside repo/images/ and set path accordingly.)
+EVE_IMAGE_PATH = "windows-3.png"
 
 # ---------------------------
 # Utility helpers
@@ -56,7 +53,6 @@ def make_eve_view(img: Image.Image, pixel_scale: int = 12, noise_level: float = 
     w, h = img.size
     small = img.resize((max(1, w // pixel_scale), max(1, h // pixel_scale)), Image.NEAREST)
     pixelated = small.resize((w, h), Image.NEAREST)
-    # add light gaussian blur to soften (makes it look corrupt)
     pixelated = pixelated.filter(ImageFilter.GaussianBlur(radius=0.8))
     # add noise overlay
     arr = np.array(pixelated).astype(np.int16)
@@ -432,5 +428,6 @@ with tabs[1]:
 # ---------------------------
 st.markdown("---")
 st.caption("Educational demo. Keys shown / downloadable for demonstration — in real QKD, keys and raw material are handled confidentially.")
+
 
 
