@@ -133,7 +133,7 @@ with st.sidebar:
     st.markdown("---")
     st.write("History & Exports")
     history_limit = st.number_input("History size (keep last N runs)", min_value=1, max_value=100, value=20)
-    st.markdown("Deploy note: add `images/windows.png` to your repo for the default sample image.")
+   
 
 # Tabs
 tabs = st.tabs(["Simulation", "Graphs & Analysis"])
@@ -428,6 +428,7 @@ with tabs[1]:
 # ---------------------------
 st.markdown("---")
 st.caption("Educational demo. Keys shown / downloadable for demonstration — in real QKD, keys and raw material are handled confidentially.")
+
 
 
 
