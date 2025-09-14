@@ -118,7 +118,7 @@ def simulate_bb84(num_bits: int, p_noise: float, p_eve: float, seed: int | None 
 # App layout & behavior
 # ---------------------------
 st.set_page_config(page_title=PAGE_TITLE, layout="wide", page_icon="🔐")
-st.title("🔐 Quantum Cryptography Simulator — BB84 (Professional)")
+st.title(" Quantum Cryptography Simulator — BB84 ")
 st.write("Flow: Alice uploads → photons animate → basis matching graph → Eve view → QBER check (abort if >11%) → AES-GCM encrypt/decrypt → Bob downloads.")
 
 # Sidebar controls
@@ -428,6 +428,7 @@ with tabs[1]:
 # ---------------------------
 st.markdown("---")
 st.caption("Educational demo. Keys shown / downloadable for demonstration — in real QKD, keys and raw material are handled confidentially.")
+
 
 
 
