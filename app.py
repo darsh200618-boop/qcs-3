@@ -217,7 +217,7 @@ with tabs[0]:
 
             # LEFT-ALIGNED Results area (under left column)
             st.markdown("---")
-            st.subheader("3) Results (left-aligned)")
+            st.subheader("3) Results ")
 
             m1, m2, m3 = st.columns(3)
             m1.metric("Sifted key length", sift_len)
@@ -428,6 +428,7 @@ with tabs[1]:
 # ---------------------------
 st.markdown("---")
 st.caption("Educational demo. Keys shown / downloadable for demonstration — in real QKD, keys and raw material are handled confidentially.")
+
 
 
 
